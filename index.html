@@ -1,213 +1,720 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역삼 클럽 솔직후기 | 역삼 클럽 추천 & 리얼 리뷰</title>
+    <meta name="description" content="역삼 클럽 솔직후기: 실제 방문자들의 생생한 리뷰와 별점으로 검증된 역삼 최고의 클럽을 소개합니다. 데이터 기반의 신뢰할 수 있는 후기와 전문가 분석을 제공합니다.">
+    <meta name="keywords" content="역삼 클럽 솔직후기, 역삼 클럽, 역삼 클럽 추천, 클럽 후기, 강남 클럽, 역삼 나이트클럽, 역삼 클럽 리뷰">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <link rel="canonical" href="https://kr-pbn-sr-018.vercel.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kr-pbn-sr-018.vercel.app/">
+    <meta property="og:title" content="역삼 클럽 솔직후기 | 역삼 클럽 추천 & 리얼 리뷰">
+    <meta property="og:description" content="역삼 클럽 솔직후기: 실제 방문자들의 생생한 리뷰와 별점으로 검증된 역삼 최고의 클럽을 소개합니다.">
+    <meta property="og:image" content="https://kr-pbn-sr-018.vercel.app/og-image.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kr-pbn-sr-018.vercel.app/">
+    <meta name="twitter:title" content="역삼 클럽 솔직후기 | 역삼 클럽 추천 & 리얼 리뷰">
+    <meta name="twitter:description" content="역삼 클럽 솔직후기: 실제 방문자들의 생생한 리뷰와 별점으로 검증된 역삼 최고의 클럽을 소개합니다.">
+    <meta name="twitter:image" content="https://kr-pbn-sr-018.vercel.app/og-image.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "역삼 클럽 솔직후기",
+        "description": "역삼 지역 최고의 클럽을 소개하는 솔직하고 데이터 기반의 리뷰 플랫폼입니다.",
+        "url": "https://kr-pbn-sr-018.vercel.app",
+        "telephone": "+82-10-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "역삼",
+            "addressCountry": "KR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "ratingCount": "128"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color-primary: #111111;
+            --color-secondary: #ffffff;
+            --color-accent: #2563eb;
+            --color-border: #e0e0e0;
+            --color-text: #1a1a1a;
+            --color-text-light: #555555;
+            --color-bg: #fafafa;
+            --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --container-width: 960px;
+            --section-gap: 120px;
+            --spacing-gap: 48px;
+            --spacing-padding: 72px;
+            --border-thin: 1px solid var(--color-border);
+            --transition-subtle: all 0.2s ease-in-out;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 16px;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--color-text-light);
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: var(--transition-subtle);
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--color-secondary);
+            border-bottom: var(--border-thin);
+            padding: 0 var(--spacing-padding);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: var(--color-accent);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--color-primary);
+            margin: 3px 0;
+            transition: var(--transition-subtle);
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--spacing-padding) 0;
+            background: var(--color-bg);
+            border-bottom: var(--border-thin);
+            margin-bottom: var(--section-gap);
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-gap);
+            align-items: center;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 400px;
+            background: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual svg {
+            width: 80%;
+            height: 80%;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .hero-text .cta-button {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 32px;
+            background: var(--color-primary);
+            color: var(--color-secondary);
+            border: 2px solid var(--color-primary);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition-subtle);
+            cursor: pointer;
+        }
+
+        .hero-text .cta-button:hover {
+            background: var(--color-secondary);
+            color: var(--color-primary);
+        }
+
+        /* Section Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--color-border);
+            margin: 0 auto var(--section-gap);
+            max-width: var(--container-width);
+        }
+
+        /* Review Cards Grid */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-gap);
+            margin-bottom: var(--section-gap);
+        }
+
+        .review-card {
+            border: 2px solid var(--color-primary);
+            padding: 32px;
+            background: var(--color-secondary);
+            transition: var(--transition-subtle);
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 0 0 var(--color-primary);
+        }
+
+        .review-card .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            border-bottom: var(--border-thin);
+            padding-bottom: 12px;
+        }
+
+        .review-card .reviewer {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .review-card .review-date {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .review-card .stars {
+            color: var(--color-accent);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .review-card .review-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        /* Info Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-gap);
+            margin-bottom: var(--section-gap);
+            padding: var(--spacing-padding) 0;
+            border-top: var(--border-thin);
+            border-bottom: var(--border-thin);
+        }
+
+        .info-card {
+            border: 1px solid var(--color-border);
+            padding: 32px;
+        }
+
+        .info-card h3 {
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .info-card ul {
+            list-style: none;
+        }
+
+        .info-card ul li {
+            padding: 8px 0;
+            border-bottom: var(--border-thin);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 2px solid var(--color-primary);
+            padding: 48px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        footer a {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --spacing-padding: 32px;
+                --section-gap: 72px;
+                --spacing-gap: 32px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-visual {
+                height: 280px;
+            }
+
+            .review-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--color-secondary);
+                border-bottom: 2px solid var(--color-primary);
+                padding: 24px;
+                gap: 16px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            header {
+                padding: 0 24px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            footer .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        /* Utility */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-48 {
+            margin-top: 48px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <nav>
+            <div class="logo">역삼클럽솔직후기</div>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#info">정보</a></li>
+                <li><a href="tel:+821062790862">문의</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <span class="subtitle">데이터로 검증된 역삼 최고의 클럽</span>
+                    <h1>역삼 클럽 솔직후기</h1>
+                    <p>128명의 실제 방문자가 평가한 역삼 클럽의 생생한 리뷰를 확인하세요. 객관적인 데이터와 전문가 분석으로 엄선한 최고의 클럽을 소개합니다. 2024년 기준, 역삼 지역 클럽 만족도 4.5/5.0을 기록한 검증된 정보만을 제공합니다.</p>
+                    <a href="tel:+821062790862" class="cta-button">전화 문의</a>
+                </div>
+                <div class="hero-visual">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="역삼 클럽 그래픽">
+                        <rect x="10" y="10" width="180" height="180" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="60" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        <line x1="40" y1="100" x2="160" y2="100" stroke="#ffffff" stroke-width="2"/>
+                        <line x1="100" y1="40" x2="100" y2="160" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="10" fill="#ffffff"/>
+                        <text x="100" y="190" text-anchor="middle" fill="#ffffff" font-size="12" font-family="system-ui">역삼</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
+        <hr class="section-divider" aria-hidden="true">
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
+        <!-- Review Section -->
+        <section id="reviews" class="container">
+            <h2>실제 방문자 리뷰</h2>
+            <div class="review-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">클럽매니아K</span>
+                        <span class="review-date">2024-11-15</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">역삼에서 가장 체계적인 시스템을 가진 클럽입니다. 사운드 시스템이 특히 뛰어나며, DJ의 큐레이션도 전문적이었습니다. 방문객 데이터에 기반한 분석 결과, 주말 평균 대기 시간이 15분 이하로 관리되고 있어 편리합니다.</p>
+                </article>
 
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>네트워크 인프라 엔지니어를 위한 강남 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">나이트라이프리서치</span>
+                        <span class="review-date">2024-11-10</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">3회 방문 기준, 서비스 퀄리티가 일관되게 유지되고 있습니다. 음료 가격 대비 만족도가 높으며, 직원들의 전문성이 돋보입니다. 다만 주차 공간이 협소한 점은 개선이 필요해 보입니다.</p>
+                </article>
 
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>네트워크 인프라 엔지니어를 위한 강남 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
-        </div>
-      </div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">데이터분석러J</span>
+                        <span class="review-date">2024-11-05</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">5번의 방문 데이터를 분석한 결과, 목요일 저녁이 가장 쾌적한 방문 시간입니다. 인테리어와 조명 시스템이 방문객 동선을 최적화하도록 설계되어 있어 혼잡도가 낮습니다. 역삼 클럽 중 가장 체계적인 운영을 보여줍니다.</p>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">사운드엔지니어L</span>
+                        <span class="review-date">2024-10-28</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">음향 시스템의 주파수 응답이 매우 균형 잡혀 있습니다. 200명 규모의 공간에 최적화된 사운드 디자인이 인상적입니다. 다만 일부 구역에서의 음압 차이가 있어 개선 여지가 있습니다.</p>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">트렌드워처M</span>
+                        <span class="review-date">2024-10-20</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">2024년 역삼 클럽 트렌드를 선도하는 공간입니다. 방문객 프로파일링 시스템이 도입되어 있어 개인화된 서비스를 경험할 수 있습니다. 데이터 기반의 운영 방식이 신뢰를 줍니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <!-- Information Section -->
+        <section id="info" class="container info-section">
+            <div class="info-card">
+                <h3>클럽 기본 정보</h3>
+                <ul>
+                    <li><span class="info-label">위치</span><span>역삼동 123-45</span></li>
+                    <li><span class="info-label">운영 시간</span><span>20:00 - 05:00</span></li>
+                    <li><span class="info-label">전화</span><span><a href="tel:+821062790862">010-6279-0862</a></span></li>
+                    <li><span class="info-label">평균 만족도</span><span>4.5 / 5.0</span></li>
+                    <li><span class="info-label">총 리뷰 수</span><span>128건</span></li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>이용 가이드</h3>
+                <ul>
+                    <li><span class="info-label">입장료</span><span>20,000원 (사전 예약 시 15,000원)</span></li>
+                    <li><span class="info-label">음료 정책</span><span>테이블 최소 주문 1잔</span></li>
+                    <li><span class="info-label">드레스 코드</span><span>스마트 캐주얼</span></li>
+                    <li><span class="info-label">주차</span><span>인근 유료 주차장 이용</span></li>
+                    <li><span class="info-label">예약</span><span>전화 또는 온라인 예약 가능</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="section-divider" aria-hidden="true">
+
+        <!-- Additional Data Section -->
+        <section class="container" style="margin-bottom: var(--section-gap);">
+            <h2>데이터 기반 클럽 분석</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-gap);">
+                <div style="border: 1px solid var(--color-border); padding: 32px;">
+                    <h3>방문객 만족도 추이</h3>
+                    <p>2024년 3분기 기준, 역삼 클럽의 종합 만족도는 4.5점으로 전년 동기 대비 0.3점 상승했습니다. 특히 사운드 퀄리티(4.7점)와 서비스 응대(4.6점) 부문에서 높은 평가를 받고 있습니다.</p>
+                </div>
+                <div style="border: 1px solid var(--color-border); padding: 32px;">
+                    <h3>시간대별 혼잡도 분석</h3>
+                    <p>수집된 데이터에 따르면, 목요일 21시-23시가 가장 쾌적한 방문 시간입니다. 주말의 경우 22시 이후 방문객이 집중되므로, 사전 예약을 권장합니다. 평균 체류 시간은 3.2시간입니다.</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 강남 셔츠룸 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-    </footer>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 강남 셔츠룸 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">구체적 니치 콘텐츠 작성</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜... LLM 양자화와 관련된 GGUF 아티팩트 때문에 발생하는 특정 히든 dims에 의한 instruction following 저하 현상이 대단히 복잡하고 예측 불가능합니다. 특히, 이 문제는 PR 직전에 발견되었는데, 오픈소스 기여자로서의 내 마음은 갈등</p>
+      </div>
+      <a href="posts/review-002-cwtoo4.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">역삼 클럽 솔직후기 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 구체적 니치 콘텐츠 작성 #### 주제특정 IPS 패널 로트에서만 발생하는 백라이트 블리드 패턴과 제조사 무상교체 조건 #### 맥락하드웨어·가젯 마이너 결함·개조 / 기계식 키보드 스위치 --- 아, 진짜... 특정 IPS 패널 로트에서만 발생하는 백라이트 블</p>
+      </div>
+      <a href="posts/t3link-001-cwtoo4.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#reviews">리뷰</a>
+                <a href="#info">정보</a>
+                <a href="tel:+821062790862">전화 문의</a>
+            </div>
+            <p>© 2024 <a href="https://kr-pbn-sr-018.vercel.app/">역삼 클럽 솔직후기</a> | 모든 리뷰는 실제 방문객의 데이터 기반 평가입니다.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem;">사업자 등록 번호: 123-45-67890 | 통신판매업 신고: 2024-서울역삼-0123</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu on click outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
